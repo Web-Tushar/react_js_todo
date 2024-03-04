@@ -1,0 +1,71 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+
+ li{
+     list-style-type: none;
+}
+
+a{
+     text-decoration: none;
+}
+
+
+#main{
+     padding: 20px;
+     margin-top: 30px;
+     background-color: rgb(29, 55, 55);
+}
+.container{
+     width: 1000px;
+     margin: 0 auto;
+}
+.main_wrapper{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  
+}
+
+.input{
+     padding: 8px;
+     font-size: 20px;
+     font-weight: 600;
+}
+
+.handle_btn{
+     display: flex;
+     column-gap: 20px;
+
+}
+.handle_btn >button{
+     font-size: 20px;
+     font-weight: 600;
+     text-transform: capitalize;
+
+}
+.handle_btn >button:active{
+     color: green;
+
+}
+
+.todoShow{
+     margin: 10px 0 10px 0;
+     font-size: 25px;
+     font-weight: 600;
+     color: white;
+}
+.update_edt{
+     font-size: 20px;
+     font-weight: 600;
+}
+
+.update_edt:active{
+     color: green;
+}
+.delete{
+     color: red;
+}

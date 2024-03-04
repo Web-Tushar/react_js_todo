@@ -47,36 +47,44 @@ function App() {
 }
 
   return (
-    <>
-      <input value={name} onChange={(e)=>setName(e.target.value)} type="text" placeholder="name" /><br /><br />
-      <input value={caption} onChange={(e)=>setCaption(e.target.value)} type="text" placeholder="caption" /><br /><br />
-      {
-        show?
-        <button onClick={handleUpdate}>update</button>
+    <section id="main">
+        <div className="container">
+            <div className="main_wrapper">
+              <div className="main_item">
+                    <input className="input" value={name} onChange={(e)=>setName(e.target.value)} type="text" placeholder="name" /><br /><br />
+                    <input className="input" value={caption} onChange={(e)=>setCaption(e.target.value)} type="text" placeholder="caption" /><br /><br />
+                    <div className="btn">
+                    {
+                      show?
+                      <button className="update_edt" onClick={handleUpdate}>update</button>
 
-        :
-        <button onClick={handleBtn}>Add Todo</button>
+                      :
+                      <button className="update_edt" onClick={handleBtn}>Add Todo</button>
 
-      }
-      {
-        arr.map((item,index)=>(
-          <div>
-            <li>{item.name}</li>
-            <li>{item.caption}</li>
-            <button onClick={()=>handleEdit(item,index)}>edit</button>
-            <button onClick={()=>handleDelete(index)}>delete</button>
-          </div>
-        ))
-      }
-    </>
+                    }
+
+                    </div>
+                    {
+                      arr.map((item,index)=>(
+                        <div>
+                          <li className="todoShow">1: {item.name}</li>
+                          <li className="todoShow">2: {item.caption}</li>
+
+                          <div className="handle_btn">
+                              <button onClick={()=>handleEdit(item,index)}>edit</button>
+                              <button className="delete" onClick={()=>handleDelete(index)}>delete</button>
+                            
+                          </div>
+                        </div>
+                      ))
+                    }
+
+              </div>
+            </div>
+        </div>
+    </section>
+  
   )
 }
 
 export default App
-
-    
-
-
-
-
-
