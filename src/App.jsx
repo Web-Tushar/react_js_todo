@@ -50,8 +50,11 @@ function App() {
     <section id="main">
         <div className="container">
             <div className="main_wrapper">
+            
+                <h2 className="heading">To-do-list</h2>
+              
               <div className="main_item">
-                    <input className="input" value={name} onChange={(e)=>setName(e.target.value)} type="text" placeholder="name" /><br /><br />
+                    <input className="input" value={name} onChange={(e)=>setName(e.target.value)} type="text" placeholder="enter your to do" /><br /><br />
                     <input className="input" value={caption} onChange={(e)=>setCaption(e.target.value)} type="text" placeholder="caption" /><br /><br />
                     <div className="btn">
                     {

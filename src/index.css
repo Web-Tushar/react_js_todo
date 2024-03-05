@@ -29,6 +29,10 @@ a{
      align-items: center;
   
 }
+.heading{
+     color: white;
+     margin: 10px 0 10px 0;
+}
 
 .input{
      padding: 8px;
